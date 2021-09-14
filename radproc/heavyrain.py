@@ -36,7 +36,7 @@ Module for heavy rainfall analysis.
 
 """
 
-from __future__ import division, print_function
+
 import pandas as pd
 import numpy as np
 import radproc.core as _core

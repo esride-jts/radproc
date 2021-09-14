@@ -33,7 +33,7 @@ Convert gauge data to pandas DataFrames with same format as RADOLAN data and sav
 .. moduleauthor:: Jennifer Kreklow
 """
 
-from __future__ import division, print_function
+
 import numpy as np
 import pandas as pd
 import os, gc

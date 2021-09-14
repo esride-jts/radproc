@@ -31,7 +31,7 @@ and avoid conflicts arising between different GDAL installations required for ot
 """
 
 # standard libraries
-from __future__ import absolute_import
+
 import datetime as dt
 
 try:
@@ -132,18 +132,18 @@ def get_radolan_header_token_pos(header):
 
     head_dict = get_radolan_header_token()
 
-    for token in head_dict.keys():
+    for token in list(head_dict.keys()):
         d = header.rfind(token)
         if d > -1:
             head_dict[token] = d
     head = {}
 
     result_dict = {}
-    result_dict.update((k, v) for k, v in head_dict.items() if v is not None)
-    for k, v in head_dict.items():
+    result_dict.update((k, v) for k, v in list(head_dict.items()) if v is not None)
+    for k, v in list(head_dict.items()):
         if v is not None:
             start = v + len(k)
-            filt = [x for x in result_dict.values() if x > v]
+            filt = [x for x in list(result_dict.values()) if x > v]
             if filt:
                 stop = min(filt)
             else:
@@ -190,7 +190,7 @@ def parse_DWD_quant_composite_header(header):
     head = get_radolan_header_token_pos(header)
     # iterate over token and fill output dict accordingly
     # for k, v in head.iteritems():
-    for k, v in head.items():
+    for k, v in list(head.items()):
         if v:
             if k == 'BY':
                 out['datasize'] = int(header[v[0]:v[1]]) - len(header) - 1

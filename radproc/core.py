@@ -331,7 +331,7 @@ def load_years_and_resample(HDFFile, year_start, year_end=0, freq="years"):
         print("Error! HDF5 file can not be opened!\n \
 Please check if directory path is correct and file is currently used by any other application.")
     except KeyError:
-        print('Error at %i/%i' %(year, month))
+        print(('Error at %i/%i' %(year, month)))
     except TypeError:
         print('Error! Please enter years as integer numbers and path to HDF5 file as string!\n \
 Example: rp.load_years_and_resample(r"P:\\User\Data\HDF5\RW.h5", 2008, 2010)')

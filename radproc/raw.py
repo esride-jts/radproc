@@ -35,7 +35,7 @@ Unzip, import, clip and convert RADOLAN raw data and write DataFrames to HDF5.
     :synopsis: Python package radproc (Radar data processing), Module raw
 .. moduleauthor:: Jennifer Kreklow
 """
-from __future__ import division, print_function
+
 
 import numpy as np
 import pandas as pd
@@ -305,7 +305,7 @@ def radolan_binaries_to_dataframe(inFolder, idArr=None):
             # and insert data as row in the two-dimensional data array.
             dataArr[i,:] = data[idArr]
         
-        except Exception, e:
+        except Exception as e:
             skipped_files.append(files[i])
             error_messages.append(str(e))
             # extract datetime from filename instead of metadata

@@ -53,7 +53,7 @@ Collection of all functions based on arcpy.
     :synopsis: Python package radproc (Radar data processing), Module arcgis
 .. moduleauthor:: Jennifer Kreklow
 """
-from __future__ import division, print_function
+
 
 import numpy as np
 import pandas as pd
