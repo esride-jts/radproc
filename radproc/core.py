@@ -233,7 +233,7 @@ def load_years_and_resample(HDFFile, year_start, year_end=0, freq="years"):
         >>> import radproc as rp
         >>> meanPrecip = rp.load_years_and_resample(r"C:\Data\RADOLAN.h5", 2010, 2015, "years").mean()
         # The resulting pandas Series can be exported to an ESRI Grid:    
-        >>> rp.export_to_raster(series=meanPrecip, idRaster=rp.import_idarray_from_raster(r"C:\Data\idras"), outRaster=r"P:\GIS_data\N_mean10_15")
+        >>> rp.export_to_raster(series=meanPrecip, idRaster=rp.import_idarray_from_raster(r"C:/Data/idras"), outRaster=r"P:/GIS_data/N_mean10_15")
     
     .. note:: All resampling functions set the label of aggregated intervals at the right,
               hence every label describes the precipitation accumulated in the previous interval period.
