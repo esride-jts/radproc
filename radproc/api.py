@@ -14,7 +14,7 @@
  radproc API
 =============
 """
-from __future__ import print_function
+
 
 from radproc.core import coordinates_degree_to_stereographic, save_idarray_to_txt, import_idarray_from_txt 
 from radproc.core import load_months_from_hdf5, load_month, load_years_and_resample, hdf5_to_years, hdf5_to_months, hdf5_to_days, hdf5_to_hours, hdf5_to_hydrologicalSeasons

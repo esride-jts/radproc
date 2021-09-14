@@ -40,7 +40,7 @@ Data import from HDF5-file and temporal data aggregation.
 .. moduleauthor:: Jennifer Kreklow
 """
 
-from __future__ import division, print_function
+
 import numpy as np
 import pandas as pd
 import sys
@@ -334,7 +334,7 @@ Please check if directory path is correct and file is currently used by any othe
         print('Error at %i/%i' %(year, month))
     except TypeError:
         print('Error! Please enter years as integer numbers and path to HDF5 file as string!\n \
-Example: rp.load_years_and_resample(r"P:\User\Data\HDF5\RW.h5", 2008, 2010)')
+Example: rp.load_years_and_resample(r"P:\\User\Data\HDF5\RW.h5", 2008, 2010)')
     except UnboundLocalError:
         print('Error! Sorry, this function currently only works for entire years starting in January! \n \
 To resample smaller time periods, you can import the months with load_months_from_hdf5() and resample them with df.resample()')
